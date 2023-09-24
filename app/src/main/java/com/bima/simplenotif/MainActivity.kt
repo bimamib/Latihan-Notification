@@ -48,6 +48,12 @@ class MainActivity : AppCompatActivity() {
         binding.btnSendNotification.setOnClickListener {
             sendNotification(title, message)
         }
+        binding.btnOpenDetail.setOnClickListener {
+            val detailIntent = Intent(this@MainActivity, DetailActivity::class.java)
+            detailIntent.putExtra(DetailActivity.EXTRA_TITLE, title)
+            detailIntent.putExtra(DetailActivity.EXTRA_MESSAGE, message)
+            startActivity(detailIntent)
+        }
     }
 
     //aksi untuk onClick pada button
