@@ -71,6 +71,8 @@ class MainActivity : AppCompatActivity() {
             .setAutoCancel(true)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+            /* Create or update. */
             val channel = NotificationChannel(
                 CHANNEL_ID,
                 CHANNEL_NAME,
